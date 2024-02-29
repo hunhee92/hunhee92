@@ -49,13 +49,13 @@ while True:
             wdl[2] += 1
 
         
-            conti = input("게임을 계속 하시겠습니까? (y/n): ").lower()
+        conti = input("게임을 계속 하시겠습니까? (y/n): ").lower()
 
-            if conti == "y":
-                continue
-            elif conti == "n":
-                print(f"승: {wdl[0]}, 무: {wdl[1]}, 패: {wdl[2]}")
-                exit()
-            else:
-                print("잘못 입력 하셨습니다. 게임을 종료합니다")
-                exit()
+        if conti == "y":
+            continue
+        elif conti == "n":
+            print(f"승: {wdl[0]}, 무: {wdl[1]}, 패: {wdl[2]}")
+            exit()
+        else:
+            print("잘못 입력 하셨습니다. 게임을 종료합니다")
+            exit()
