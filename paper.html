@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>가위 바위 보</title>
+<style>
+table {
+    width: 100%;   
+}
+th, td {
+        text-align: center;
+    }
+</style>
+
+
+<script>
+    function e_msg() {
+        var e_user = document.getElementById('usernum').value;
+        if (e_user !== "가위" && e_user !== "바위" && e_user !== "보") {
+            alert("잘못 입력 하셨습니다. 가위, 바위, 보 중에 하나를 입력 해주세요.");
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<body>
+    <h1>가위 바위 보 게임</h1>
+    <form action="/" method="post" onsubmit="return e_msg()">
+        <label for="username">가위 바위 보!</label>
+        <input type="text" id="usernum" name="usernum"><input type="submit" value="도전!">
+    </form>
+
+<div></div>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>사용자</th>
+                <th>컴퓨터</th>
+                <th>승패</th>
+            </tr>
+        </thead>
+       <tbody>
+        {% for game in data %}
+        <tr>
+            <td>{{loop.index}}</td>
+            <td>사용자값</td>
+            <td>컴퓨터값</td>
+            <td>결과</td>
+        </tr>   
+        {% endfor %}
+        
+      
+       </tbody>
+        
+
+    </table>
+
+</body>
+
+</html>
