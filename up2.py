@@ -24,10 +24,10 @@ while True:
                 if htry_count < try_count:
                     htry_count = try_count
                     print(f"시도 횟수: {try_count}")
-                    conti = input("게임을 계속 할까요? y / n")
+                    conti = input("게임을 계속 할까요? y / n : ")
                 else:
                     print(f"이전 게임 최고시도 횟수 :{htry_count}")
-                    conti = input("게임을 계속 할까요? y / n")
+                    conti = input("게임을 계속 할까요? y / n :")
 
                 if conti == "y":
 
